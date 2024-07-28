@@ -20,7 +20,6 @@ import MobileOnly from "./MobileOnly"
 import RecentNotes from "./RecentNotes"
 import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
-import Chatbot from "./Chatbot"
 
 
 export {
@@ -46,5 +45,4 @@ export {
   NotFound,
   Breadcrumbs,
   Comments,
-  Chatbot,
 }
