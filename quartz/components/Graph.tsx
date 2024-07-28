@@ -29,8 +29,8 @@ const defaultOptions: GraphOptions = {
   localGraph: {
     drag: true,
     zoom: true,
-    depth: -1,
-    scale: 0.9,
+    depth: 1,
+    scale: 1.1,
     repelForce: 0.5,
     centerForce: 0.3,
     linkDistance: 30,
@@ -38,7 +38,7 @@ const defaultOptions: GraphOptions = {
     opacityScale: 1,
     showTags: true,
     removeTags: [],
-    focusOnHover: true,
+    focusOnHover: false,
   },
   globalGraph: {
     drag: true,
