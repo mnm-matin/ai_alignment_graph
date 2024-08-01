@@ -2,6 +2,8 @@
 
 <img src="/docs/assets/ai_graph_3_sec.gif" width="100%">
 
+Check out the live version here [AI Alignment Research Graph](https://mnm-matin.github.io/ai_alignment_graph/)
+
 ## Features
 - Interactive graph visualization of AI Alignment Research
 - High-Quality LLM-based segementation of papers
@@ -39,6 +41,7 @@ npx kill-port 8080
 ## Acknowledgements
 - Thanks to [alignment-research-dataset](https://github.com/moirage/alignment-research-dataset) for the dataset
 - Built using [Quartz v4](https://quartz.jzhao.xyz/)
+- **Commits prior to commit hash #5c7cb55 come from the quartz v4 web framework, this is to allow easier updates of the web-framework using ```git pull upstream```**
 
 
 <p align="center">
