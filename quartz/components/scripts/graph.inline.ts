@@ -1,4 +1,4 @@
-import type { ContentDetails, ContentIndex } from "../../plugins/emitters/contentIndex"
+import type { ContentDetails } from "../../plugins/emitters/contentIndex"
 import * as d3 from "d3"
 import { registerEscapeHandler, removeAllChildren } from "./util"
 import { FullSlug, SimpleSlug, getFullSlug, resolveRelative, simplifySlug } from "../../util/path"
@@ -124,7 +124,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     )
     .force("center", d3.forceCenter().strength(centerForce))
 
-  const height = Math.max(graph.offsetHeight, 650)
+  const height = Math.max(graph.offsetHeight, 250)
   const width = graph.offsetWidth
 
   const svg = d3
