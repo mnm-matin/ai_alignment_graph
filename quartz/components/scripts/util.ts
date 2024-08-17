@@ -3,7 +3,6 @@ export function registerEscapeHandler(outsideContainer: HTMLElement | null, cb: 
   function click(this: HTMLElement, e: HTMLElementEventMap["click"]) {
     if (e.target !== this) return
     e.preventDefault()
-    e.stopPropagation()
     cb()
   }
 

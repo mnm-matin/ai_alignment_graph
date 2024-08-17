@@ -1,4 +1,4 @@
-import type { ContentDetails } from "../../plugins/emitters/contentIndex"
+import type { ContentDetails, ContentIndex } from "../../plugins/emitters/contentIndex"
 import * as d3 from "d3"
 import { registerEscapeHandler, removeAllChildren } from "./util"
 import { FullSlug, SimpleSlug, getFullSlug, resolveRelative, simplifySlug } from "../../util/path"
@@ -102,7 +102,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
 
   const graphData: { nodes: NodeData[]; links: LinkData[] } = {
     nodes: [...neighbourhood].map((url) => {
-      const text = url.startsWith("tags/") ? "#" + url.substring(5) : (data.get(url)?.title ?? url)
+      const text = url.startsWith("tags/") ? "#" + url.substring(5) : data.get(url)?.title ?? url
       return {
         id: url,
         text: text,
@@ -124,7 +124,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     )
     .force("center", d3.forceCenter().strength(centerForce))
 
-  const height = Math.max(graph.offsetHeight, 250)
+  const height = Math.max(graph.offsetHeight, 650)
   const width = graph.offsetWidth
 
   const svg = d3

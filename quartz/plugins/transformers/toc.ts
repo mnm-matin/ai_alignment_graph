@@ -25,7 +25,9 @@ interface TocEntry {
 }
 
 const slugAnchor = new Slugger()
-export const TableOfContents: QuartzTransformerPlugin<Partial<Options>> = (userOpts) => {
+export const TableOfContents: QuartzTransformerPlugin<Partial<Options> | undefined> = (
+  userOpts,
+) => {
   const opts = { ...defaultOptions, ...userOpts }
   return {
     name: "TableOfContents",

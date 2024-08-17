@@ -14,7 +14,6 @@ export interface Argv {
 }
 
 export interface BuildCtx {
-  buildId: string
   argv: Argv
   cfg: QuartzConfig
   allSlugs: FullSlug[]

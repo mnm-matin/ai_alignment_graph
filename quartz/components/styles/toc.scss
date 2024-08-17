@@ -29,18 +29,8 @@ button#toc {
   list-style: none;
   overflow: hidden;
   max-height: none;
-  transition:
-    max-height 0.5s ease,
-    visibility 0s linear 0s;
+  transition: max-height 0.5s ease;
   position: relative;
-  visibility: visible;
-
-  &.collapsed {
-    transition:
-      max-height 0.5s ease,
-      visibility 0s linear 0.5s;
-    visibility: hidden;
-  }
 
   &.collapsed > .overflow::after {
     opacity: 0;

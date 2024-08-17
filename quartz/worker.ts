@@ -7,14 +7,8 @@ import { createFileParser, createProcessor } from "./processors/parse"
 import { options } from "./util/sourcemap"
 
 // only called from worker thread
-export async function parseFiles(
-  buildId: string,
-  argv: Argv,
-  fps: FilePath[],
-  allSlugs: FullSlug[],
-) {
+export async function parseFiles(argv: Argv, fps: FilePath[], allSlugs: FullSlug[]) {
   const ctx: BuildCtx = {
-    buildId,
     cfg,
     argv,
     allSlugs,
