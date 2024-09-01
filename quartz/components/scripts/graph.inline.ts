@@ -168,6 +168,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     .force("link", forceLink(graphData.links).distance(linkDistance))
     .force("collide", forceCollide<NodeData>((n) => nodeRadius(n)).iterations(3))
 
+  const height = Math.max(graph.offsetHeight, 650)
   const width = graph.offsetWidth
   const height = Math.max(graph.offsetHeight, 250)
 
